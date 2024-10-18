@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Persona 2</title>
+</head> 
+<body> 
+    <nav id="menubar"></nav> 
+
+    <script> 
+        fetch("../../menubar.html") 
+        .then(response => response.text()) 
+        .then(data => { 
+            document.getElementById("menubar").innerHTML = data; 
+        }) 
+        .catch(error => console.error("Error loading menubar:", error)); 
+    </script>
+
+    <h1>Persona 2</h1>
+
+    <img src="" alt="" align="center" />
+    
+    <p><b>Persona Type</b>: 5th grader</p>
+    <p><b>Name</b>: Julie</p>
+    <p><b>Age</b>: 10</p>
+    <p><b>Location</b>: Northport, Long Island</p>
+    <p><b>Technical Comfort</b>: Pretty technically savvy</p>
+    <p><b>Profession</b>: Student</p>
+
+    <h2>Back Story</h2>
+
+    <h2>Frustrations</h2>
+
+    <h2>Motivations</h2>
+
+    <h2>Ideal Experience</h2>
+</body> 
+</html> 

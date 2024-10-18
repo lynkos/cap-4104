@@ -3,13 +3,13 @@
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Persona</title>
+    <title>Persona 1</title>
 </head> 
 <body> 
     <nav id="menubar"></nav> 
 
     <script> 
-        fetch("../menubar.html") 
+        fetch("../../menubar.html") 
         .then(response => response.text()) 
         .then(data => { 
             document.getElementById("menubar").innerHTML = data; 
