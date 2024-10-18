@@ -1,4 +1,3 @@
-# CAP 4104
 ## Introduction
 Hello! This is our project. We are currently using Markdown (i.e. `.md`) for this website's design, but will soon switch to using `HTML`, `CSS`, and other technologies.
 
