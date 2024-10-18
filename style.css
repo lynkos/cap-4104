@@ -72,4 +72,9 @@ body {
   .column {
     width: 100%;
   }
+
+  .menu li a {
+    float: none;
+    display: block;
+  }
 }
