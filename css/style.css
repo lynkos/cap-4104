@@ -25,6 +25,8 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  display: flex;
+  justify-content: center;
 }
 
 .menu {
@@ -69,8 +71,12 @@ body {
     width: 100%;
   }
 
-  .menu li a {
+  .menu li a menu {
     float: none;
+    display: block;
+  }
+
+  .menubar menu {
     display: block;
   }
 }
