@@ -9,7 +9,17 @@ body {
   font-size: 12px;
 }
 
-ul {
+.menubar {
+  position: sticky;
+  align-items: center;
+  justify-content: space-between;
+  top: 0px;
+  background-blend-mode: darken;
+  background-size: cover;
+  color: white;
+}
+
+.menubar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -17,7 +27,18 @@ ul {
   background-color: #333;
 }
 
-li a {
+.menu {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  display: inline;
+  float: left;
+}
+
+.menu li a {
   display: block;
   color: white;
   text-align: center;
@@ -25,23 +46,12 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.menu li a:hover:not(.active) {
   background-color: #111;
 }
 
-.active {
+.menu .active {
   background-color: #04AA6D;
-}
-
-.menu {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
-}
-
-.menu li {
-  display: inline;
-  float: left;
 }
 
 .column {
