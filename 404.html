@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>404: Page Not Found</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav id="menubar"></nav>
+    <script> 
+      fetch("menubar.html") 
+        .then(response => response.text()) 
+        .then(data => { 
+          document.getElementById("menubar").innerHTML = data; 
+        }) 
+        .catch(error => console.error("Error loading menubar:", error)); 
+    </script>
+
+    <h1><center>404: Page Not Found</center></h1>
+  </body>
+</html>
