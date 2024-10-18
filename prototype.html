@@ -3,14 +3,13 @@
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Scenario 2</title>
-    <link href="../../css/style.css" rel="stylesheet">
+    <title>Prototype</title>
+    <link href="css/style.css" rel="stylesheet">
 </head> 
 <body> 
-    <nav id="menubar"></nav> 
-
+    <nav id="menubar"></nav>
     <script> 
-        fetch("../../menubar.html") 
+        fetch("menubar.html") 
         .then(response => response.text()) 
         .then(data => { 
             document.getElementById("menubar").innerHTML = data; 
@@ -18,4 +17,4 @@
         .catch(error => console.error("Error loading menubar:", error)); 
     </script> 
 </body> 
-</html>
+</html> 
