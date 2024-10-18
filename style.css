@@ -46,12 +46,8 @@ body {
   text-decoration: none;
 }
 
-.menu li a:hover:not(.active) {
+.menu li a:hover {
   background-color: #111;
-}
-
-.menu .active {
-  background-color: #04AA6D;
 }
 
 .column {
