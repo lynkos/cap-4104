@@ -14,31 +14,8 @@ body {
   padding: 0;
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #000;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 900px) {
-  .column {
-    width: 100%;
-  }
-
-  .menu li a menu {
-    float: none;
-    display: block;
-  }
-
-  .menubar menu {
-    display: block;
-  }
+h1 {
+  font-size: 4vw;
+  color: #000;
+  letter-spacing: -0.02em;
 }
