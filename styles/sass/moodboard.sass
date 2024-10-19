@@ -4,7 +4,7 @@
 // DIMENSIONS
 $swatch-width: 14.29%
 $swatch-height: 200px
-$moodboard-height: 150vh
+$moodboard-height: 250vh
 
 @mixin absolute($height, $top: 0, $bottom: 0, $left: 0, $right: 0)
   position: absolute
@@ -42,10 +42,10 @@ p
     @include absolute(40vh)
 
     h1
-      @include header(45px)
+      @include variables.header(45px)
 
     h2
-      @include header(17px)
+      @include variables.header(17px)
   
   .images
     @include absolute(100%, 0, auto, 0, auto)
