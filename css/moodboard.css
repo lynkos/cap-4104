@@ -1,0 +1,46 @@
+@import "style.css";
+
+p {
+  font-size: 0.8em;
+  font-style: italic;
+  padding-top: 0.5em;
+  letter-spacing: 0.09em;
+}
+
+.description {
+  display: none;
+}
+
+.mood-board {
+  width: 100%;
+  height: 100vh;
+  background: #ffeecc;
+  position: relative;
+}
+
+.mood-board .element {
+  position: absolute;
+  z-index: 0;
+}
+
+.mood-board .element &:hover .description {
+  display: block;
+}
+
+.mood-board .element img {
+  width: 100%;
+  height: 100%;
+}
+
+.mood-board .images {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: auto;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
