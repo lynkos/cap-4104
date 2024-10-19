@@ -3,6 +3,7 @@
 .align-center {
   position: absolute;
   text-align: center;
+  z-index: 1;
 }
 
 p {
@@ -14,6 +15,9 @@ p {
 
 #colors {
   height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   position: absolute;
   z-index: -1;
