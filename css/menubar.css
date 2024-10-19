@@ -1,3 +1,16 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 5px;
+
+    img {
+        width: auto;
+        height: 115px;
+    }
+}
+
 .menubar {
     position: sticky;
     align-items: center;
@@ -6,6 +19,7 @@
     background-blend-mode: darken;
     background-size: cover;
     color: #fff;
+    z-index: 10;
 
     menu {
         list-style-type: none;
