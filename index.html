@@ -10,15 +10,8 @@
 
   <body>
     <nav id="menubar"></nav>
-    <script> 
-      fetch("menubar.html") 
-        .then(response => response.text()) 
-        .then(data => { 
-          document.getElementById("menubar").innerHTML = data; 
-        }) 
-        .catch(error => console.error("Error loading menubar:", error)); 
-    </script>
-
+    <script src="js/menubar.js"></script>
+    
     <div align="center">
       <p>Introduction.</p><br>
       <img src="" alt="Team Photo" />
