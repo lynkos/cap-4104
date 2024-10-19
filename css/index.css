@@ -1,0 +1,21 @@
+@import "style.css";
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: transparent;
+    border: 0px solid #000;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+@media screen and (max-width: 900px) {
+    .column {
+      width: 100%;
+    }
+}
