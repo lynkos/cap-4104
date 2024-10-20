@@ -3,8 +3,8 @@ $(document).ready(function() {
   var resizable = $(".resizeable");
   var element = $(".element");
 
-  element.each( setRandomSize );
-  element.each( setRandomPosition );
+  element.each(setRandomSize);
+  element.each(setRandomPosition);
   
   resizable.resizable({
     containment: "#background",
@@ -59,9 +59,6 @@ $(document).ready(function() {
 
     // Height per section
     //var sectionHeight = (moodboardHeight - paletteHeight) / 2;
-
-    $(this).outerWidth(),
-    $(this).outerHeight()
 
     // Top: [0, sectionHeight] or Bottom: [0, sectionHeight]
     var randomTop = randomIntFromInterval(0, paletteHeight);
