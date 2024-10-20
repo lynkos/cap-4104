@@ -48,8 +48,8 @@ $(document).ready(function() {
   }
 
   function setRandomPosition() {
-    // Generate random top position % [0, 75]
-    var randomTop = randomIntFromInterval(0, 75);
+    // Generate random top position % [0, 85]
+    var randomTop = randomIntFromInterval(0, 85);
 
     // Generate random left position % [0, 85]
     var randomLeft = randomIntFromInterval(0, 85);
