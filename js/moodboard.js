@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  var draggable = $('.draggable');
-  var resizable = $('.resizeable');
-  var element = $('.element');
+  var draggable = $(".draggable");
+  var resizable = $(".resizeable");
+  var element = $(".element");
 
   element.each( setRandomSize );
   element.each( setRandomPosition );
@@ -9,7 +9,7 @@ $(document).ready(function() {
   resizable.resizable({
     containment: "#background",
     aspectRatio: true,
-    handles: "n, w, s, e, nw, ne, sw, se"
+    handles: "n, w, s, e"
   });
 
   draggable.draggable({
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
   function setRandomSize() {
     // Get image size
-    var img = $(this).find('img');
+    var img = $(this).find("img");
     imgHeight = img.outerHeight();
     imgWidth = img.outerWidth();
     
@@ -29,7 +29,7 @@ $(document).ready(function() {
       var randomWidth = randomIntFromInterval(35, 50);
       
       $(this).css({
-        width: randomWidth + '%'
+        width: randomWidth + "%"
       });
     }
     
@@ -41,23 +41,44 @@ $(document).ready(function() {
       var proportionalWidth = (imgWidth * randomHeight) / imgHeight;
 
       $(this).css({
-        height: randomHeight + 'px',
-        width: proportionalWidth + 'px'
+        height: randomHeight + "px",
+        width: proportionalWidth + "px"
       });
     }
   }
 
   function setRandomPosition() {
     // Generate random top position % [0, 85]
-    var randomTop = randomIntFromInterval(0, 85);
+    //var randomTop = randomIntFromInterval(0, 85);
 
     // Generate random left position % [0, 85]
     var randomLeft = randomIntFromInterval(0, 85);
 
-    $(this).css({
-      top: randomTop + '%',
-      left: randomLeft + '%'
-    })
+    //var moodboardHeight = $(".mood-board").height();
+    var paletteHeight = $("#palette").height();
+
+    // Height per section
+    //var sectionHeight = (moodboardHeight - paletteHeight) / 2;
+
+    $(this).outerWidth(),
+    $(this).outerHeight()
+
+    // Top: [0, sectionHeight] or Bottom: [0, sectionHeight]
+    var randomTop = randomIntFromInterval(0, paletteHeight);
+
+    if (Math.random() >= 0.5) {
+      $(this).css({
+        top: randomTop + "px", // "%",
+        left: randomLeft + "%"
+      })
+    }
+    
+    else {
+      $(this).css({
+        bottom: randomTop + "px", // "%",
+        left: randomLeft + "%"
+      })
+    }
   }
 
   function randomIntFromInterval(min, max) {
