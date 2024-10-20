@@ -18,12 +18,8 @@ $(document).ready(function() {
     stack: ".element",
   });
 
-  if(window.innerHeight > window.innerWidth) {
-    
-  }
-
   function setRandomSize() {
-    //Get image size
+    // Get image size
     var img = $(this).find('img');
     imgHeight = img.outerHeight();
     imgWidth = img.outerWidth();
@@ -38,8 +34,8 @@ $(document).ready(function() {
     }
     
     else {
-      // Change Height to [100, 200] randomly
-      var randomHeight = randomIntFromInterval(100, 200);
+      // Change Height to [200, 300] randomly
+      var randomHeight = randomIntFromInterval(200, 300);
       
       // Calc proportional width
       var proportionalWidth = (imgWidth * randomHeight) / imgHeight;
