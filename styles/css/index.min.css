@@ -1,1 +1,1 @@
-@import"style.min.css";.column{float:left;width:calc(100%/3);padding:10px;background-color:rgba(0,0,0,0);border:0px solid #000}.row:after{content:"";display:table;clear:both}@media screen and (max-width: 900px){.column{width:100%}}
+@import"style.min.css";.column{float:left;width:calc(100%/3);padding:10px}.column img{width:75px;height:auto}.row:after{content:"";display:table;clear:both}@media screen and (max-width: 750px){.column{width:100%}}
