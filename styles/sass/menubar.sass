@@ -1,6 +1,5 @@
 @use "variables"
 
-$max-width: 900px
 $logo-height: 115px
     
 .logo
@@ -86,11 +85,10 @@ li.dropdown
 .dropdown:hover .dropdown-content 
     display: block
 
-@media screen and (max-width: $max-width) 
+@media screen and (max-width: variables.$max-width) 
     .menu li a menu 
       float: none
       display: block
-    
   
     .menubar menu 
       display: block

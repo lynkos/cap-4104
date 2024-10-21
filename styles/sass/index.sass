@@ -1,0 +1,18 @@
+@use "variables"
+@import "style.min.css"
+
+.column
+    float: left
+    width: variables.$col-width
+    padding: 10px
+    background-color: transparent
+    border: 0px solid variables.$black
+  
+.row:after
+    content: ""
+    display: table
+    clear: both
+  
+@media screen and (max-width: variables.$max-width)
+    .column
+      width: 100%
