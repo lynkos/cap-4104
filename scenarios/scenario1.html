@@ -1,65 +1,62 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Scenario 1</title>
-    <link href="../styles/css/scenario.css" rel="stylesheet">
-</head> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Scenario 1</title>
+        <link href="../styles/css/scenario.min.css" rel="stylesheet">
+    </head> 
 
-<body> 
-    <nav id="menubar"></nav> 
+    <body> 
+        <nav id="menubar"></nav>
+        <div class="container">
+            <h2>Scenario 1 - Elizabeth</h2>
 
-    <div class="container">
-        <h2>Scenario 1 - Elizabeth</h2>
-
-        <div class="scenario">
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-description">Elizabeth feels overwhelmed by her upcoming assignment deadlines.</div>
-            </div>
-            <div class="arrow"></div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-description">She opens the website on her laptop to help her focus.</div>
-            </div>
-            <div class="arrow"></div> 
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-description">Elizabeth gets familiarized with the website's comfortable and encouraging atmosphere.</div>
-            </div>
-            <div class="arrow"></div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-description">She starts to focus with the platform's distraction-blocking feature.</div>
-            </div>
-            <div class="arrow"></div>
-            <div class="step">
-                <div class="step-number">5</div>
-                <div class="step-description">Elizabeth receives personalized study tips and sets reminders for her next study session.</div>
-            </div>
-            <div class="arrow"></div>
-            <div class="step">
-                <div class="step-number">6</div>
-                <div class="step-description">After completing some tasks, she views her progress and feels motivated to continue.</div>
-            </div>
-            <div class="arrow"></div>
-            <div class="step">
-                <div class="step-number">7</div>
-                <div class="step-description">Elizabeth finishes her study session and relaxes, knowing she is on track to meet her deadlines.</div>
+            <div class="scenario">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-description">Elizabeth feels overwhelmed by her upcoming assignment deadlines.</div>
+                </div>
+                <div class="arrow"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-description">She opens the website on her laptop to help her focus.</div>
+                </div>
+                <div class="arrow"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-description">Elizabeth gets familiarized with the website's comfortable and encouraging atmosphere.</div>
+                </div>
+                <div class="arrow"></div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-description">She starts to focus with the platform's distraction-blocking feature.</div>
+                </div>
+                <div class="arrow"></div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-description">Elizabeth receives personalized study tips and sets reminders for her next study session.</div>
+                </div>
+                <div class="arrow"></div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-description">After completing some tasks, she views her progress and feels motivated to continue.</div>
+                </div>
+                <div class="arrow"></div>
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-description">Elizabeth finishes her study session and relaxes, knowing she is on track to meet her deadlines.</div>
+                </div>
             </div>
         </div>
-    </div>
 
-
-
-    <script> 
-        fetch("../menubar.html") 
-        .then(response => response.text()) 
-        .then(data => { 
-            document.getElementById("menubar").innerHTML = data; 
-        }) 
-        .catch(error => console.error("Error loading menubar:", error)); 
-    </script> 
-</body> 
+        <script> 
+            fetch("../menubar.html") 
+            .then(response => response.text()) 
+            .then(data => { 
+                document.getElementById("menubar").innerHTML = data; 
+            }) 
+            .catch(error => console.error("Error loading menubar:", error)); 
+        </script> 
+    </body> 
 </html>
