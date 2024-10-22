@@ -12,3 +12,24 @@ body
   background-color: variables.$background
   margin: 0
   padding: 0
+
+.container
+  width: 80%
+  margin: 20px auto
+  background-color: variables.$white
+  padding: 20px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+
+.column
+  float: left
+  width: variables.$col-width
+  padding: 0
+
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+@media screen and (max-width: variables.$max-width)
+  .column
+    width: 100%

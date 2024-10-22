@@ -2,19 +2,8 @@
 @import "style.min.css"
 
 .column
-    float: left
-    width: variables.$col-width
     padding: 10px
 
     img
         width: 75px
         height: auto
-  
-.row:after
-    content: ""
-    display: table
-    clear: both
-  
-@media screen and (max-width: variables.$max-width)
-    .column
-      width: 100%

@@ -1,21 +1,52 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Scenario 2</title>
-    <link href="../styles/css/style.min.css" rel="stylesheet">
-</head> 
-<body> 
-    <nav id="menubar"></nav> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Scenario 2</title>
+        <link href="../styles/css/scenario.min.css" rel="stylesheet">
+    </head> 
 
-    <script> 
-        fetch("../menubar.html")
-        .then(response => response.text()) 
-        .then(data => { 
-            document.getElementById("menubar").innerHTML = data; 
-        }) 
-        .catch(error => console.error("Error loading menubar:", error)); 
-    </script> 
-</body> 
+    <body> 
+        <nav id="menubar"></nav>
+        <div class="container">
+            <h2>Scenario 2 - PERSONA_NAME_HERE</h2>
+
+            <div class="scenario">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-description">STEP_1_DESCRIPTION</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-description">STEP_2_DESCRIPTION</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-description">STEP_3_DESCRIPTION</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-description">STEP_4_DESCRIPTION</div>
+                </div>
+                <!-- <div class="arrow"></div> -->
+                <!-- NOTE: Final step shouldn't have an arrow afterwards -->
+            </div>
+        </div>
+
+        <script> 
+            fetch("../menubar.html") 
+            .then(response => response.text()) 
+            .then(data => { 
+                document.getElementById("menubar").innerHTML = data; 
+            }) 
+            .catch(error => console.error("Error loading menubar:", error)); 
+        </script> 
+    </body> 
 </html>
