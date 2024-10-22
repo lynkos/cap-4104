@@ -1,19 +1,6 @@
 @use "variables"
 @import "style.min.css"
 
-.column
-    float: left
-    width: variables.$col-width
-
-.row:after
-    content: ""
-    display: table
-    clear: both
-  
-@media screen and (max-width: variables.$max-width)
-    .column
-      width: 100%
-
 .item
     display: inline-block
     transition: all 0.5s
