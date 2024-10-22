@@ -1,0 +1,45 @@
+@use "variables"
+@import "style.min.css"
+
+$accent-color: #ff5757
+
+.quote
+    font-style: italic
+    background-color: $accent-color
+    padding: 15px
+    margin: 20px 0
+    border-left: 4px solid #333
+
+.persona-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    
+    h1
+        margin: 0
+        font-size: 2em
+        color: $accent-color
+        
+    p
+        font-size: 1.5em
+        
+    img
+        border-radius: 50%
+        width: 250px
+        height: 260px
+
+.section
+    margin-top: 20px
+    
+    h2
+        border-bottom: 2px solid #ddd
+        padding-bottom: 10px
+        color: $accent-color
+
+ul
+    list-style: none
+    padding: 0
+    
+    li
+        margin-bottom: 10px
+        font-size: 1.1em
