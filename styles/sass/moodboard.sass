@@ -1,0 +1,92 @@
+@use "variables"
+@import "style.min.css"
+
+// DIMENSIONS
+$palette-width: 14.29%
+$palette-height: 25vh
+$moodboard-height: 175vh
+
+// MIXINS
+@mixin absolute($height, $top: 0, $bottom: 0, $left: 0, $right: 0)
+  position: absolute
+  top: $top
+  bottom: $bottom
+  left: $left
+  right: $right
+  margin: auto
+  width: 100%
+  height: $height
+
+@mixin header($header-size: 5vw, $color: variables.$white, $font: variables.$main-serif)
+  font-family: $font
+  font-size: $header-size
+  color: $color
+  text-align: center
+  letter-spacing: -0.02em
+    
+.align-center
+  text-align: center
+  position: absolute
+  z-index: 1
+
+p
+  font-size: 0.8em
+  font-style: italic
+  padding-top: 0.5em
+  letter-spacing: 0.09em
+  color: variables.$white
+
+.description
+  display: none
+  text-align: center
+  font-style: italic
+  text-shadow: 0 0 3px variables.$space-cadet
+
+.mood-board
+  width: 100%
+  height: $moodboard-height
+  position: relative
+
+  .title
+    @include absolute(40vh)
+
+    h1
+      @include header(45px)
+
+    h2
+      @include header(17px)
+  
+  .images
+    @include absolute(100%, 0, auto, 0, auto)
+    max-height: 100%
+    overflow: hidden
+  
+  .element
+    &:hover
+      .description
+        display: block
+    
+    position: absolute
+    z-index: 0
+
+    img 
+      width: 100%
+      height: 100%
+
+#palette
+  height: $palette-height
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  position: absolute
+  z-index: -1
+
+.color
+  position: absolute
+  width: $palette-width
+  height: 100%
+
+  p
+    text-align: center
+    text-transform: uppercase

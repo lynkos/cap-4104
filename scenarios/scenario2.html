@@ -1,21 +1,71 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Scenario 2</title>
-    <link href="../css/style.css" rel="stylesheet">
-</head> 
-<body> 
-    <nav id="menubar"></nav> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Scenario 2</title>
+        <link href="../styles/css/scenario.min.css" rel="stylesheet">
+    </head> 
 
-    <script> 
-        fetch("../menubar.html") 
-        .then(response => response.text()) 
-        .then(data => { 
-            document.getElementById("menubar").innerHTML = data; 
-        }) 
-        .catch(error => console.error("Error loading menubar:", error)); 
-    </script> 
-</body> 
+    <body> 
+        <nav id="menubar"></nav>
+        <div class="container">
+            <h2>Scenario 2 - Ariana</h2>
+
+            <div class="scenario">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-description">Ariana is overwhelmed by her coursework; she goes to a library to study.</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-description">She opens and app which guides her with a study routine.</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-description">The app suggests a style technique called pomodoro that assigns breaks.</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-description">She uses the task manager to organize and prioritize assignments.</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-description">Calming sounds and colors help her focus.</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-description">The app celebrates her progress, boosting motivation.</div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-description">Ariana finishes her work, feeling relieved and accomplished.</div>
+                </div>
+
+                <!-- <div class="arrow"></div> -->
+                <!-- NOTE: Final step shouldn't have an arrow afterwards -->
+            </div>
+        </div>
+
+        <script> 
+            fetch("../menubar.html") 
+            .then(response => response.text()) 
+            .then(data => { 
+                document.getElementById("menubar").innerHTML = data; 
+            }) 
+            .catch(error => console.error("Error loading menubar:", error)); 
+        </script> 
+    </body> 
 </html>
