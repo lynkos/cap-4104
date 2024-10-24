@@ -26,7 +26,7 @@ $(document).ready(function() {
     
     if(window.innerHeight > window.innerWidth) {
       // Generate random width % [35, 50]
-      var randomWidth = randomIntFromInterval(35, 50);
+      var randomWidth = randomIntFromInterval(40, 50);
       
       $(this).css({
         width: randomWidth + "%"
@@ -35,7 +35,7 @@ $(document).ready(function() {
     
     else {
       // Change Height to [200, 300] randomly
-      var randomHeight = randomIntFromInterval(200, 300);
+      var randomHeight = randomIntFromInterval(225, 325);
       
       // Calc proportional width
       var proportionalWidth = (imgWidth * randomHeight) / imgHeight;
