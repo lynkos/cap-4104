@@ -10,8 +10,21 @@ body
   font-family: variables.$paragraph-serif
   font-size: variables.$font-size
   background-color: variables.$background
+  background-image: linear-gradient(to top, #b093dd, #ac87d2, #a97bc7, #a56ebb, #a262af, #9a5ba7, #93539e, #8b4c96, #7e488f, #714489, #643f81, #583b7a)
   margin: 0
   padding: 0
+  overflow-x: hidden
+
+canvas
+  -webkit-transform: translate3d(0, 0, 0)
+  -moz-transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0)
+  z-index: -2
+
+#canvas
+  position: fixed
+  inset: 0
+  width: 100%
 
 .container
   width: 80%
@@ -32,7 +45,7 @@ body
 
 .alert
   padding: 20px
-  background-color: rgba(255, 255, 255, 0.4)
+  background-color: rgba(255, 255, 255, 0.5)
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
   border-radius: 10px
   font-size: 13px
@@ -46,7 +59,7 @@ body
     color: variables.$menubar
 
   &::before
-    content: "⚠️ Important"
+    content: "Important"
     text-transform: uppercase
     font-size: 14px
     color: variables.$menubar

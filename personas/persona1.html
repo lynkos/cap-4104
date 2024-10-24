@@ -1,80 +1,78 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Persona 1</title>
-    <link href="../styles/css/persona.min.css" rel="stylesheet">
-</head> 
-<body> 
-    <nav id="menubar"></nav>
-
-    <div class="container">
-        <div class="persona-header">
-            <div>
-                <h1>Persona 1: Elizabeth</h1> <br>
-                <br> <p><strong>Age:</strong> 24</p>
-                <p><strong>Location:</strong> Miami, Florida</p>
-                <p><strong>Major:</strong> Marine Biology</p>
-                <p><strong>Technical Comfort:</strong> Advanced</p>
-                <p><strong>Profession:</strong> Student</p>
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Persona 1</title>
+        <link href="../styles/css/persona.min.css" rel="stylesheet">
+    </head> 
+    <body> 
+        <nav id="menubar"></nav>
+        <div class="container">
+            <div class="persona-header">
+                <div>
+                    <h1>Persona 1: Elizabeth</h1> <br>
+                    <br><p><strong>Age:</strong> 24</p>
+                    <p><strong>Location:</strong> Miami, Florida</p>
+                    <p><strong>Major:</strong> Marine Biology</p>
+                    <p><strong>Technical Comfort:</strong> Advanced</p>
+                    <p><strong>Profession:</strong> Student</p>
+                </div>
+                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg">
             </div>
-            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg">
+
+            <div class="section">
+                <h2>Back Story</h2>
+                <ul>
+                    <li>Full-time student balancing coursework, part-time job, and extracurriculars.</li>
+                    <li>Struggles with time management and deadlines.</li>
+                    <li>Likes using digital tools to organize assignments.</li>
+                    <li>Often procrastinates, leading to last-minute stress.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Motivations</h2>
+                <ul>
+                    <li>Wants to complete assignments before the deadline.</li>
+                    <li>Tools to minimize distractions and improve focus.</li>
+                    <li>Desire to improve grades.</li>
+                    <li>Values user-friendly study platforms.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Frustrations</h2>
+                <ul>
+                    <li>Easily distracted by social media.</li>
+                    <li>Struggles with prioritizing tasks effectively.</li>
+                    <li>Finds some time management tools overwhelming.</li>
+                    <li>Dislikes cluttered or poorly designed study areas.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Ideal Experience</h2>
+                <ul>
+                    <li>Tool that encourages users to continue with assignments.</li>
+                    <li>Platform that blocks distractions during study sessions.</li>
+                    <li>Appreciates websites with cozy designs, enhancing focus.</li>
+                    <li>Platform offers personalized study tips and techniques.</li>
+                </ul>
+            </div>
+
+            <div class="quote">
+                "I often get overwhelmed by deadlines and procrastinate. A tool that helps me stay focused would really help!"
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Back Story</h2>
-            <ul>
-                <li>Full-time student balancing coursework, part-time job, and extracurriculars.</li>
-                <li>Struggles with time management and deadlines.</li>
-                <li>Likes using digital tools to organize assignments.</li>
-                <li>Often procrastinates, leading to last-minute stress.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Motivations</h2>
-            <ul>
-                <li>Wants to complete assignments before the deadline.</li>
-                <li>Tools to minimize distractions and improve focus.</li>
-                <li>Desire to improve grades.</li>
-                <li>Values user-friendly study platforms.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Frustrations</h2>
-            <ul>
-                <li>Easily distracted by social media.</li>
-                <li>Struggles with prioritizing tasks effectively.</li>
-                <li>Finds some time management tools overwhelming.</li>
-                <li>Dislikes cluttered or poorly designed study areas.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Ideal Experience</h2>
-            <ul>
-                <li>Tool that encourages users to continue with assignments.</li>
-                <li>Platform that blocks distractions during study sessions.</li>
-                <li>Appreciates websites with cozy designs, enhancing focus.</li>
-                <li>Platform offers personalized study tips and techniques.</li>
-            </ul>
-        </div>
-
-        <div class="quote">
-            "I often get overwhelmed by deadlines and procrastinate. A tool that helps me stay focused would really help!"
-        </div>
-    </div>
-
-    <script> 
-        fetch("../menubar.html") 
-        .then(response => response.text()) 
-        .then(data => { 
-            document.getElementById("menubar").innerHTML = data; 
-        }) 
-        .catch(error => console.error("Error loading menubar:", error)); 
-    </script>
-
-</body> 
+        <script> 
+            fetch("../menubar.html") 
+            .then(response => response.text()) 
+            .then(data => { 
+                document.getElementById("menubar").innerHTML = data; 
+            }) 
+            .catch(error => console.error("Error loading menubar:", error)); 
+        </script>
+    </body> 
 </html>
