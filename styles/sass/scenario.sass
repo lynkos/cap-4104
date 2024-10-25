@@ -1,8 +1,6 @@
 @use "variables"
+@use "mixins"
 @import "style.min.css"
-
-body
-    background-color: #b4daf6
 
 .scenario
     display: flex
@@ -14,14 +12,14 @@ body
     display: flex
     align-items: center
     padding: 10px
-    background-color: #eed6fd
+    background-color: variables.$pastel-purple
     border-radius: 5px
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+    @include mixins.dark-shadow(0, 2px, 5px, 0.1)
 
 .step-number
     flex: 0 0 50px
     font-size: 24px
-    color: #333
+    color: variables.$cyber-grape
     text-align: center
     font-weight: bold
 
@@ -34,7 +32,7 @@ body
     height: 0
     border-left: 10px solid transparent
     border-right: 10px solid transparent
-    border-top: 10px solid #768fa1
+    border-top: 10px solid variables.$toolbox
     margin: 0 auto
     margin-top: -10px
     margin-bottom: 10px

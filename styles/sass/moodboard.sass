@@ -1,28 +1,11 @@
 @use "variables"
+@use "mixins"
 @import "style.min.css"
 
 // DIMENSIONS
 $palette-width: 14.29%
 $palette-height: 25vh
 $moodboard-height: 175vh
-
-// MIXINS
-@mixin absolute($height, $top: 0, $bottom: 0, $left: 0, $right: 0)
-  position: absolute
-  top: $top
-  bottom: $bottom
-  left: $left
-  right: $right
-  margin: auto
-  width: 100%
-  height: $height
-
-@mixin header($header-size: 5vw, $color: variables.$white, $font: variables.$main-serif)
-  font-family: $font
-  font-size: $header-size
-  color: $color
-  text-align: center
-  letter-spacing: -0.02em
     
 .align-center
   text-align: center
@@ -48,16 +31,16 @@ p
   position: relative
 
   .title
-    @include absolute(40vh)
+    @include mixins.absolute(40vh)
 
     h1
-      @include header(45px)
+      @include mixins.header(45px)
 
     h2
-      @include header(17px)
+      @include mixins.header(17px)
   
   .images
-    @include absolute(100%, 0, auto, 0, auto)
+    @include mixins.absolute(100%, 0, auto, 0, auto)
     max-height: 100%
     overflow: hidden
   

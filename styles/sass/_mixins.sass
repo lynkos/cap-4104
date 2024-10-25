@@ -1,0 +1,21 @@
+@use "variables"
+  
+@mixin absolute($height, $top: 0, $bottom: 0, $left: 0, $right: 0)
+  position: absolute
+  top: $top
+  bottom: $bottom
+  left: $left
+  right: $right
+  margin: auto
+  width: 100%
+  height: $height
+
+@mixin header($header-size: 5vw, $color: variables.$white, $font: variables.$main-serif)
+  font-family: $font
+  font-size: $header-size
+  color: $color
+  text-align: center
+  letter-spacing: -0.02em
+    
+@mixin dark-shadow($inset: 0, $len1: 0, $len2: 10px, $alpha: 0.1)
+  box-shadow: $inset $len1 $len2 rgba(0, 0, 0, $alpha)

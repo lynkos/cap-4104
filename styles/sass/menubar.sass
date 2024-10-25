@@ -1,6 +1,8 @@
 @use "variables"
 
 $logo-height: 115px
+$max-width: 900px
+$padding: 14px 16px
     
 .logo
     display: flex
@@ -17,7 +19,7 @@ $logo-height: 115px
     position: sticky
     align-items: center
     justify-content: space-between
-    top: 0px
+    top: 0
     background-blend-mode: darken
     background-size: cover
     color: variables.$white
@@ -45,7 +47,7 @@ $logo-height: 115px
             display: block
             color: variables.$white
             text-align: center
-            padding: 14px 16px
+            padding: $padding
             text-decoration: none
 
             &:hover 
@@ -55,7 +57,7 @@ li a, .dropbtn
     display: inline-block
     color: variables.$white
     text-align: center
-    padding: 14px 16px
+    padding: $padding
     text-decoration: none
 
 li a:hover, .dropdown:hover .dropbtn 
@@ -74,7 +76,7 @@ li.dropdown
 
     a 
         color: variables.$black
-        padding: 12px 16px
+        padding: $padding
         text-decoration: none
         display: block
         text-align: left
@@ -85,7 +87,7 @@ li.dropdown
 .dropdown:hover .dropdown-content 
     display: block
 
-@media screen and (max-width: 900px) 
+@media screen and (max-width: $max-width)
     .menu li a menu 
       float: none
       display: block

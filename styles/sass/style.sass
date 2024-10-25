@@ -1,4 +1,5 @@
 @use "variables"
+@use "mixins"
 @import "menubar.min.css"
 
 *
@@ -9,9 +10,14 @@
 body
   font-family: variables.$paragraph-serif
   font-size: variables.$font-size
+  min-height: 100%
+  background-image: linear-gradient(to top, #b093dd, #ac87d2, #a97bc7, #a56ebb, #a262af, #9a5ba7, #93539e, #8b4c96, #7e488f, #714489, #643f81, #583b7a)
   margin: 0
   padding: 0
   overflow-x: hidden
+
+b, strong
+  color: variables.$menubar
 
 canvas
   -webkit-transform: translate3d(0, 0, 0)
@@ -28,13 +34,14 @@ canvas
 .container
   width: 80%
   margin: 20px auto
-  background-color: rgba(255, 255, 255, 0.7)
-  border-radius: 5px
+  background-color: variables.$container-color
+  border-radius: variables.$border-radius
   padding: 20px
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  @include mixins.dark-shadow(0, 0, 25px, 0.1)
 
   h2
     text-align: center
+    color: variables.$indigo
 
 .column
   float: left
@@ -48,9 +55,9 @@ canvas
 
 .alert
   padding: 20px
-  background-color: rgba(255, 255, 255, 0.5)
+  background-color: variables.$container-color
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
-  border-radius: 10px
+  border-radius: variables.$border-radius
   font-size: 13px
   margin-left: 25%
   margin-right: 25%
@@ -59,7 +66,6 @@ canvas
 
   strong
     text-transform: uppercase
-    color: variables.$menubar
 
   &::before
     content: "Important"
