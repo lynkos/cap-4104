@@ -2,6 +2,9 @@
 @use "mixins"
 @import "menubar.min.css"
 
+$alert-width: 50%
+$alert-margin: calc(calc(100% - #{$alert-width}) / 2)
+
 *
   margin: 0
   padding: 0
@@ -66,15 +69,15 @@ canvas
 
 .alert
   padding: 20px
+  margin-left: $alert-margin // 25%
+  margin-right: $alert-margin // 25%
   background-color: variables.$container-color
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
   border-radius: variables.$border-radius
   font-size: 13px
-  margin-left: 25%
-  margin-right: 25%
   margin-top: 10px
   margin-bottom: 10px
-  max-width: 450px
+  //max-width: 450px
 
   strong
     text-transform: uppercase
