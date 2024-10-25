@@ -8,6 +8,7 @@
     </head> 
 
     <body> 
+        <canvas id="canvas"></canvas>
         <nav id="menubar"></nav>
         <div class="container">
             <h2>Scenario 1 - Elizabeth</h2>
@@ -57,6 +58,8 @@
                 document.getElementById("menubar").innerHTML = data; 
             }) 
             .catch(error => console.error("Error loading menubar:", error)); 
-        </script> 
-    </body> 
+        </script>
+        <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+        <script src="../js/stars.js"></script>        
+    </body>
 </html>

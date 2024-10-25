@@ -6,7 +6,8 @@
         <title>Persona 1</title>
         <link href="../styles/css/persona.min.css" rel="stylesheet">
     </head> 
-    <body> 
+    <body>
+        <canvas id="canvas"></canvas>
         <nav id="menubar"></nav>
         <div class="container">
             <div class="persona-header">
@@ -74,5 +75,8 @@
             }) 
             .catch(error => console.error("Error loading menubar:", error)); 
         </script>
+
+    <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+    <script src="../js/stars.js"></script>
     </body> 
 </html>
