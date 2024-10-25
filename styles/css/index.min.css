@@ -1,1 +1,1 @@
-@import"style.min.css";.column{padding:10px}.column img{width:75px;height:auto}.alert{margin-left:10%;margin-right:10%}.alert::before{content:none}
+@import"style.min.css";img{border-radius:5px;width:100%;max-width:500px}.column{padding:10px}.column img{width:75px;height:auto}.alert{margin-left:10%;margin-right:10%;max-width:1080px}.alert::before{content:none}
