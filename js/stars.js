@@ -7,6 +7,6 @@ const starback = new Starback(canvas, {
   starColor: "#fff",
   quantity: 100,
   direction: 225,
-  backgroundColor: ["#9d519e", "#a15eab", "#a46ab7", "#a877c3", "#ab83ce", "#a581ca", "#9f7ec7", "#997cc3", "#886bb0", "#785b9e", "#684b8c", "#583b7a"],
+  backgroundColor: [ "#583b7a", "#643f81", "#714489", "#7e488f", "#8b4c96", "#93539e", "#9a5ba7", "#a262af", "#a56ebb", "#a97bc7", "#ac87d2", "#b093dd" ],
   randomOpacity: true,
 });
