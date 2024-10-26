@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-    <head>
+    <head> 
         <title>Flowchart</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,10 +10,26 @@
         <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="assets/favicon/site.webmanifest" />
-        <link rel="stylesheet" href="styles/css/style.min.css" />
-    </head>
+        <link rel="stylesheet" href="styles/css/flowchart.min.css" />
+    </head> 
     <body>
+        <canvas id="canvas"></canvas>
         <nav id="menubar"></nav>
-        <script src="js/menubar.js"></script>
-    </body>
+        <div class="container">
+            <center><h1>Flowchart</h1></center><br>
+            <img src="assets/flowchart/sitemap.png" />
+        </div>
+
+        <script> 
+            fetch("menubar.html") 
+            .then(response => response.text()) 
+            .then(data => { 
+                document.getElementById("menubar").innerHTML = data; 
+            }) 
+            .catch(error => console.error("Error loading menubar:", error)); 
+        </script>
+
+    <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+    <script src="js/stars.js"></script>
+    </body> 
 </html>
