@@ -1,8 +1,8 @@
 const canvas = document.getElementById('canvas');
   
 const starback = new Starback(canvas, {
-  width: document.body.scrollWidth,
-  height: document.body.scrollHeight,
+  width: document.body.offsetWidth, // clientWidth
+  height: document.body.offsetHeight, // clientHeight
   type: 'dot',
   starColor: "#fff",
   quantity: 100,
