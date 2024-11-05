@@ -108,15 +108,6 @@
                 <!-- NOTE: Final step shouldn't have an arrow afterwards -->
             </div>
         </div>
-
-        <script> 
-            fetch("../menubar.html") 
-            .then(response => response.text()) 
-            .then(data => { 
-                document.getElementById("menubar").innerHTML = data; 
-            }) 
-            .catch(error => console.error("Error loading menubar:", error)); 
-        </script>
         <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
         <script src="../js/stars.js"></script>        
     </body>
