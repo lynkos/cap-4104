@@ -21,9 +21,17 @@
         <link rel="manifest" href="assets/favicon/site.webmanifest" />
         <link rel="preload" as="image" href="assets/logo.png" />
         <link rel="preload" as="stylesheet" href="styles/css/style.min.css" />
+        <link rel="preload" as="stylesheet" href="styles/css/gui.min.css" />
+        <link rel="preload" as="script" href="js/stars.js" />
+        <link rel="preload" as="script" href="js/gui.js" />
         <link rel="stylesheet" href="styles/css/style.min.css" />
-    </head> 
-    <body> 
+        <link rel="stylesheet" href="styles/css/gui.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/trash-empty.css' rel='stylesheet'>
+      </head> 
+    <body>
+      <canvas id="canvas"></canvas>
+
         <div class="logo"><a href="/zenkitty" alt="Home"><img src="assets/logo.png" alt="Project Logo"></a></div>
         <nav class="menubar">
           <menu class="menu">
@@ -55,5 +63,22 @@
             <li><a href="/zenkitty/references.html" alt="References">References</a></li>
           </menu>
         </nav>
+        <div class="container">
+          <div class="header">
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+          <div id="task-counter" style="display: none"></div>
+        </div>
+      <div class="input-container">
+        <input type="text" id="new-task" placeholder="Add Task">
+        <button id="add-task-button">Submit</button>
+      </div>
+      <ul id="task-list"></ul>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+        <script src="js/gui.js"></script>
+        <script src="js/stars.js"></script>
     </body> 
 </html>
