@@ -21,9 +21,12 @@
         <link rel="manifest" href="assets/favicon/site.webmanifest" />
         <link rel="preload" as="image" href="assets/logo.png" />
         <link rel="preload" as="stylesheet" href="styles/css/style.min.css" />
+        <link rel="preload" as="script" href="js/stars.js" />
+        <link rel="preload" as="script" href="https://unpkg.com/starback@2.1.1/dist/starback.global.js" />
         <link rel="stylesheet" href="styles/css/style.min.css" />
     </head> 
-    <body> 
+    <body>
+      <canvas id="canvas"></canvas>
         <div class="logo"><a href="/zenkitty" alt="Home"><img src="assets/logo.png" alt="Project Logo"></a></div>
         <nav class="menubar">
           <menu class="menu">
@@ -55,5 +58,11 @@
             <li><a href="/zenkitty/references.html" alt="References">References</a></li>
           </menu>
         </nav>
+        <div class="container">
+          <center><h1>Prototype</h1></center><br>
+          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="1000" src="https://embed.figma.com/proto/ZIF3vcoAM7jZDODqrDNTtq/ZenKitty-Main-Page?page-id=0%3A1&node-id=3-2&node-type=frame&viewport=-27%2C1078%2C1.1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3%3A2&embed-host=share&theme=system" allowfullscreen></iframe>
+        </div>
+        <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+    <script src="js/stars.js"></script>
     </body> 
 </html>
