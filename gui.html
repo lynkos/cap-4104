@@ -31,8 +31,18 @@
       </head> 
     <body>
       <canvas id="canvas"></canvas>
+        <div class="logo">
 
-        <div class="logo"><a href="/zenkitty" alt="Home"><img src="assets/logo.png" alt="Project Logo"></a></div>
+          <svg class="progress-ring" width="120" height="120">
+            <circle class="progress-ring__circle" id="progress-bar" stroke="white" stroke-width="4" fill="none" r="52" cx="60" cy="60"/>
+          </svg>
+          <div id="task-counter" style="display: none"></div>
+    
+          <a href="/zenkitty" alt="Home" style="position: absolute;">
+            <img src="assets/logo.png" alt="Project Logo">
+          </a>
+        </div>
+
         <nav class="menubar">
           <menu class="menu">
             <li><a href="/zenkitty" alt="About">About</a></li>
@@ -64,17 +74,11 @@
           </menu>
         </nav>
         <div class="container">
-          <div class="header">
-            <div class="progress-container">
-              <div class="progress-bar" id="progress-bar"></div>
-            </div>
-          <div id="task-counter" style="display: none"></div>
-        </div>
-      <div class="input-container">
-        <input type="text" id="new-task" placeholder="Add Task">
-        <button id="add-task-button">Submit</button>
-      </div>
-      <ul id="task-list"></ul>
+          <div class="input-container">
+            <input type="text" id="new-task" placeholder="Add Task">
+            <button id="add-task-button">Submit</button>
+          </div>
+          <ul id="task-list"></ul>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
         <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>

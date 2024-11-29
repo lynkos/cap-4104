@@ -1,3 +1,10 @@
+var circle = document.querySelector('circle');
+var radius = circle.r.baseVal.value;
+var circumference = radius * 2 * Math.PI;
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = `${circumference}`;
+
 const taskCounter = document.getElementById('task-counter');
 const progressBar = document.getElementById('progress-bar');
 let totalTasks = 0;
@@ -11,6 +18,10 @@ function updateTaskCounter() {
 
 function updateProgressBar() {
     const progress = totalTasks === 0 ? 0 : (completedTasks / totalTasks) * 100;
+
+    const offset = circumference - progress / 100 * circumference;
+    circle.style.strokeDashoffset = offset;
+
     progressBar.style.width = `${progress}%`;
 
     if (totalTasks > 0 && completedTasks === totalTasks && !confettiTriggered) {

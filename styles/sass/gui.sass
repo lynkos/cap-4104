@@ -2,7 +2,6 @@
 
 .container
     padding: 20px
-    min-height: 50vh
     position: relative
     z-index: 1
 
@@ -21,26 +20,19 @@
         
     li.completed .task-text
         text-decoration: line-through
-
-.header
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin-bottom: 10px
-    padding: 10px
-    border-radius: 8px
         
 .progress-container
     width: 100%
     background: #e9ecef
     border-radius: 3px
-    margin-top: 15px
+    margin-top: 15px    
     
 .progress-bar
     height: 7px
     width: 0
     background: #828dff
     border-radius: 3px
+    stroke-linecap: round
     transition: width 0.3s
     
 .input-container
@@ -88,3 +80,14 @@ button.edit, button.delete
 
 button.edit
     margin-right: 7px
+
+.progress-ring
+    border-radius: 100%
+    z-index: 9
+
+.progress-ring__circle
+    transition: 0.35s stroke-dashoffset
+
+    // Axis compensation
+    transform: rotate(-90deg)
+    transform-origin: 50% 50%
