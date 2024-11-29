@@ -155,6 +155,13 @@ document.body.addEventListener('click', function(event) {
 
 $('[data-select-all-click]').click(function() {
     var selfAllSelector = $(this).data('select-all-click');
-    boardInputs = $('[data-select-all='+selfAllSelector+'] input');
+    boardInputs = $('[data-select-all=' + selfAllSelector + '] input');
     boardInputs.prop('checked', !boardInputs.prop('checked') );
+});
+
+$('.clear').click(function() {
+    $('#task-list').empty();
+    totalTasks = 0;
+    completedTasks = 0;
+    updateProgressBar();
 });
