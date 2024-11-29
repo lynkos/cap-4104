@@ -1,7 +1,10 @@
 @use "variables" as vars
 
+$border-radius: 1rem
+$padding: 10px
+
 .container
-    padding: 20px
+    padding: calc(2 * $padding)
     position: relative
     z-index: 1
 
@@ -10,34 +13,36 @@
         padding: 0
     
     li
-        padding: 10px
-        border-radius: 3px
+        padding: $padding
+        border-radius: $border-radius
         display: flex
         background: white
         align-items: center
         position: relative
-        margin-bottom: 5px
+        margin-top: calc($padding / 2)
+
+        &:first-child
+            margin-top: $padding
         
     li.completed .task-text
         text-decoration: line-through
             
 .input-container
     display: flex
-    margin-bottom: 10px
     
 #new-task
     flex: 1
-    padding: 10px
-    border-radius: 3px
+    padding: $padding
+    border-radius: $border-radius
     outline: none
     border: none
     
 #add-task-button
-    padding: 4.5px
+    padding: $padding
     background: vars.$menubar
     color: white
     border: none
-    border-radius: 30%
+    border-radius: $border-radius
     margin-left: 2.5px
     cursor: pointer
     
