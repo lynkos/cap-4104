@@ -1,3 +1,9 @@
+const taskCounter = document.getElementById('task-counter');
+const progressBar = document.getElementById('progress-bar');
+let totalTasks = 0;
+let completedTasks = 0;
+let confettiTriggered = false;
+let editInput = null;
 var circle = document.querySelector('circle');
 var radius = circle.r.baseVal.value;
 var circumference = radius * 2 * Math.PI;
@@ -5,24 +11,11 @@ var circumference = radius * 2 * Math.PI;
 circle.style.strokeDasharray = `${circumference} ${circumference}`;
 circle.style.strokeDashoffset = `${circumference}`;
 
-const taskCounter = document.getElementById('task-counter');
-const progressBar = document.getElementById('progress-bar');
-let totalTasks = 0;
-let completedTasks = 0;
-let confettiTriggered = false;
-let editInput = null;
-
-function updateTaskCounter() {
-    taskCounter.textContent = `${completedTasks}/${totalTasks}`;
-}
-
 function updateProgressBar() {
-    const progress = totalTasks === 0 ? 0 : (completedTasks / totalTasks) * 100;
+    const progress = totalTasks === 0 ? 0 : completedTasks / totalTasks;
+    const offset = circumference - progress * circumference;
 
-    const offset = circumference - progress / 100 * circumference;
     circle.style.strokeDashoffset = offset;
-
-    progressBar.style.width = `${progress}%`;
 
     if (totalTasks > 0 && completedTasks === totalTasks && !confettiTriggered) {
         triggerConfetti();
@@ -66,12 +59,14 @@ function addTask(text = null, completed = false) {
     if (taskText === '') return;
 
     const li = document.createElement('li');
-
     const checkbox = document.createElement('input');
+
     checkbox.type = 'checkbox';
     checkbox.className = 'checkbox';
     checkbox.checked = completed;
+
     if (completed) li.classList.add('completed');
+    
     checkbox.addEventListener('change', function() {
         if (checkbox.checked) {
             li.classList.add('completed');
@@ -80,7 +75,7 @@ function addTask(text = null, completed = false) {
             li.classList.remove('completed');
             completedTasks--;
         }
-        updateTaskCounter();
+
         updateProgressBar();
     });
 
@@ -108,7 +103,6 @@ function addTask(text = null, completed = false) {
             completedTasks--;
         }
         totalTasks--;
-        updateTaskCounter();
         updateProgressBar();
         li.remove();
     });
@@ -122,18 +116,12 @@ function addTask(text = null, completed = false) {
 
     document.getElementById('task-list').appendChild(li);
 
-    if (text === null) {
-        totalTasks++;
-    }
-    if (completed) {
-        completedTasks++;
-    }
-    updateTaskCounter();
+    if (text === null) totalTasks++;
+    if (completed) completedTasks++;
+
     updateProgressBar();
 
-    if (text === null) {
-        document.getElementById('new-task').value = '';
-    }
+    if (text === null) document.getElementById('new-task').value = '';
 }
 
 document.getElementById('add-task-button').addEventListener('click', function() {
