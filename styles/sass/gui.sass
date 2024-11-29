@@ -38,16 +38,21 @@ $padding: 10px
     border: none
 
 #button-container
-    //display: flex
     margin-top: $padding
 
-    #dark-button
+    #dark-button, #light-button
         padding: $padding
-        background: vars.$menubar
-        color: white
         border: none
         border-radius: calc($border-radius * 2)
         cursor: pointer
+
+    #dark-button
+        background: vars.$menubar
+        color: white
+
+    #light-button
+        background: rgb(250, 229, 253)
+        color: vars.$menubar
 
 #add-task-button
     padding: $padding

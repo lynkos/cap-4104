@@ -165,3 +165,44 @@ $('.clear').click(function() {
     completedTasks = 0;
     updateProgressBar();
 });
+
+function sortList() {
+    var list, i, switching, listItems, shouldSwitch, direction, switchcount = 0;
+    list = document.getElementById("task-list");
+    switching = true;
+    direction = "asc";
+
+    while (switching) {
+      switching = false;
+      listItems = list.getElementsByTagName("LI");
+
+      for (i = 0; i < (listItems.length - 1); i++) {
+        shouldSwitch = false;
+
+        if (direction == "asc") {
+          if (listItems[i].innerHTML.toLowerCase() > listItems[i + 1].innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        } else if (direction == "desc") {
+          if (listItems[i].innerHTML.toLowerCase() < listItems[i + 1].innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+      if (shouldSwitch) {
+        listItems[i].parentNode.insertBefore(listItems[i + 1], listItems[i]);
+        switching = true;
+        switchcount++;
+      } else {
+        if (switchcount == 0 && direction == "asc") {
+          direction = "desc";
+          switching = true;
+        }
+      }
+    }
+}
+  
+var sortBtn = document.querySelector(".sort");
+sortBtn.addEventListener("click", sortList, false );
