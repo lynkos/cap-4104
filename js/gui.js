@@ -152,3 +152,9 @@ document.body.addEventListener('click', function(event) {
         confettiTriggered = true;
     }
 });
+
+$('[data-select-all-click]').click(function() {
+    var selfAllSelector = $(this).data('select-all-click');
+    boardInputs = $('[data-select-all='+selfAllSelector+'] input');
+    boardInputs.prop('checked', !boardInputs.prop('checked') );
+});

@@ -74,8 +74,12 @@
             <input type="text" id="new-task" placeholder="Add Task">
             <button id="add-task-button">Submit</button>
           </div>
-          <ul id="task-list"></ul>
+          <div id="button-container">
+            <button id="dark-button" data-select-all-click="boards">Select All</button>
+          </div>
+          <ul id="task-list" data-select-all="boards"></ul>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
         <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
         <script src="js/gui.js"></script>
