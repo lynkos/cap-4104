@@ -106,7 +106,22 @@
           <div>
             <a href="#" title="Close" class="modal-close"><i class="fas fa-x"></i></a>
             <div class="inner">
-              PUT LOGIN AND REGISTER STUFF HERE
+              <center><h1>Login</h1></center><br>
+              <form action="">
+                <div class="group">
+                  <span><i class="fas fa-user"></i></span>
+                  <input id="userName" type="text" placeholder="Username" class="input" required>
+                </div>
+                
+                <div class="group">
+                  <span><i class="fas fa-unlock"></i></span>
+                  <input id="userPw" type="password" placeholder="Password" class="input" data-type="password" required>
+                </div>
+                                
+                <div class="group submit-btn">
+                  <input type="submit" class="button" value="Submit" onclick="validate()">
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -123,6 +138,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
         <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+        <script src="js/account.js"></script>
         <script src="js/gui.js"></script>
         <script src="js/stars.js"></script>
     </body> 

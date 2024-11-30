@@ -3,6 +3,37 @@
 $border-radius: 1rem
 $padding: 10px
 
+input[data-type="password"]
+    -webkit-text-security: circle
+
+.group
+    width: 20rem
+    border-bottom: 1px solid #c1c1c1
+    display: flex
+    //margin-bottom: 15px
+    
+    i
+        padding: $padding
+        color: vars.$menubar
+        background: rgb(216, 208, 219)
+        
+    input
+        border: 0
+        padding: calc($padding / 2)
+        background: rgb(216, 208, 219)
+        width: 100%
+        outline: none
+
+.submit-btn
+    border: 0
+    
+    input
+        background: vars.$menubar
+        border-radius: $border-radius
+        padding: $padding
+        color: white
+        cursor: pointer
+
 select
     border-radius: $border-radius 0 0 $border-radius
     background-color: vars.$menubar
