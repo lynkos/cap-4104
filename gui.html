@@ -82,9 +82,18 @@
         </nav>
         <div class="container">
           <div class="input-container">
+
+            <select id="priority">
+              <option selected hidden>!</option>
+              <option value="L">Low</option>
+              <option value="M">Medium</option>
+              <option value="H">High</option>
+            </select>
+  
             <input type="text" id="new-task" placeholder="Add Task">
             <button id="add-task-button">Submit</button>
           </div>
+
           <div id="button-container">
             <button id="dark-button" data-select-all-click="boards">Select All</button>
             <button id="dark-button" class="clear">Clear</button>

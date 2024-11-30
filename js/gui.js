@@ -206,3 +206,13 @@ function sortList() {
   
 var sortBtn = document.querySelector(".sort");
 sortBtn.addEventListener("click", sortList, false );
+
+// Show different text for priority
+$("#priority").prepend("<option value='" + $("#priority").val() + "' data-value='selected' selected hidden>" + $("#priority").val() + "</option>");
+
+$("#priority").on('change', function() {
+    var val = $("#priority").val();
+    $("#priority option[data-value='selected']").attr('value', val);
+    $("#priority option[data-value='selected']").text(val);
+    $("#priority").val(val);
+});

@@ -2,7 +2,24 @@
 
 $border-radius: 1rem
 $padding: 10px
-    
+
+select
+    border-radius: $border-radius 0 0 $border-radius
+    background-color: vars.$menubar
+    color: white
+    cursor: pointer
+    width: 30px
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    text-align: center
+    border: none
+    outline: none
+    display: grid
+
+    &::-ms-expand
+        display: none
+
 #container
     display: flex
     flex-direction: row
@@ -40,7 +57,7 @@ $padding: 10px
 #new-task
     flex: 1
     padding: $padding
-    border-radius: $border-radius
+    border-radius: 0 $border-radius $border-radius 0
     outline: none
     border: none
 
