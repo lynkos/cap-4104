@@ -24,8 +24,10 @@
         <link rel="preload" as="stylesheet" href="styles/css/gui.min.css" />
         <link rel="preload" as="script" href="js/stars.js" />
         <link rel="preload" as="script" href="js/gui.js" />
+        <link rel="preload" as="script" href="js/music.js" />
         <link rel="stylesheet" href="styles/css/style.min.css">
         <link rel="stylesheet" href="styles/css/gui.min.css">
+        <link rel="stylesheet" href="styles/css/music.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/trash-empty.css' rel='stylesheet'>
       </head> 
@@ -33,7 +35,48 @@
       <canvas id="canvas"></canvas>
       <div id="container">
 
-        <div>MUSIC_PLAYER</div>
+        <div id="player">
+          <div id="player-track">
+            <div id="track-name"></div>
+            <div id="artist-name"></div>
+            <div id="track-time">
+              <div id="current-time"></div>
+              <div id="track-length"></div>
+            </div>
+            <div id="seek-bar-container">
+              <div id="seek-time"></div>
+              <div id="s-hover"></div>
+              <div id="seek-bar"></div>
+            </div>
+          </div>
+          <div id="player-content">
+            <div id="album-art">
+              <img src="assets/music/cover_art/gyoza.jpg" class="active" id="_1" />
+              <img src="assets/music/cover_art/jaackson.jpg" id="_2" />
+              <img src="assets/music/cover_art/mf_doom.jpg" id="_3" />
+              <img src="assets/music/cover_art/macabre_plaza.jpg" id="_4" />
+              <img src="assets/music/cover_art/kyu.jpg" id="_5" />
+              <div id="buffer-box">Buffering</div>
+            </div>
+            <div id="player-controls">
+              <div class="control">
+                <div class="button" id="play-previous">
+                  <i class="fas fa-backward"></i>
+                </div>
+              </div>
+              <div class="control">
+                <div class="button" id="play-pause-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="control">
+                <div class="button" id="play-next">
+                  <i class="fas fa-forward"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
         <div class="logo">
           <svg class="progress-ring" width="120" height="120">
@@ -155,5 +198,6 @@
         <script src="js/account.js"></script>
         <script src="js/gui.js"></script>
         <script src="js/stars.js"></script>
+        <script src="js/music.js"></script>
     </body> 
 </html>
