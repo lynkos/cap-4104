@@ -1,6 +1,5 @@
 $(function () {
     const playerTrack = $("#player-track");
-    const bgArtwork = $("#player-bg-artwork");
     const trackName = $("#track-name");
     const artistName = $("#artist-name");
     const albumArt = $("#album-art");
@@ -14,6 +13,7 @@ $(function () {
     const tTime = $("#track-length");
     const playPreviousTrackButton = $("#play-previous");
     const playNextTrackButton = $("#play-next");
+
     const tracks = ["Gyoza", "Moonbeams", "High John", "Glorifying the Past", "Stargazing"];
     const artistNames = [
       "less.people",
@@ -82,7 +82,6 @@ $(function () {
       ctSeconds = Math.floor(seekLoc - ctMinutes * 60);
   
       if (ctMinutes < 0 || ctSeconds < 0) return;
-  
       if (ctMinutes < 0 || ctSeconds < 0) return;
   
       if (ctMinutes < 10) ctMinutes = "0" + ctMinutes;
@@ -208,9 +207,16 @@ $(function () {
         albumArt.find("img.active").removeClass("active");
         $("#" + currArtwork).addClass("active");
   
-        bgArtworkUrl = $("#" + currArtwork).attr("src");
+        // bgArtworkUrl = $("#" + currArtwork).attr("src");
   
-        bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
+        // playerTrack.css({ "background-image": "url(" + bgArtworkUrl + ")",
+        //   "background-size": "cover",
+        //   "background-position": "center",
+        //   "background-repeat": "no-repeat",
+        //   "backdrop-filter": "blur(10px)",
+        //   "filter": "blur(25px)",
+        //   "-webkit-filter": "blur(25px)",
+        // });
       } else {
         if (flag == 0 || flag == 1) --currIndex;
         else ++currIndex;
