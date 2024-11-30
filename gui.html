@@ -31,6 +31,10 @@
       </head> 
     <body>
       <canvas id="canvas"></canvas>
+      <div id="container">
+
+        <div>MUSIC_PLAYER</div>
+        
         <div class="logo">
           <svg class="progress-ring" width="120" height="120">
             <circle class="progress-ring__circle" id="progress-bar" stroke="white" stroke-width="4" fill="none" r="52" cx="60" cy="60"/>
@@ -38,6 +42,13 @@
           <a href="/zenkitty" alt="Home" style="position: absolute;"><img src="assets/logo.png" alt="Project Logo"></a>
           <div id="task-counter" style="display: none"></div>
         </div>
+
+        <div id="right-button-container">
+          <a href="#pref-modal"><button id="right-button"><i class="fas fa-gear"></i></button></a>
+          <a href="#login-modal"><button id="right-button">Login/Register</button></a>
+        </div>
+      </div>
+      </div>
 
         <nav class="menubar">
           <menu class="menu">
@@ -81,6 +92,25 @@
           </div>
           <ul id="task-list" data-select-all="boards"></ul>
         </div>
+
+        <div id="login-modal" class="modal-window">
+          <div>
+            <a href="#" title="Close" class="modal-close"><i class="fas fa-x"></i></a>
+            <div class="inner">
+              PUT LOGIN AND REGISTER STUFF HERE
+            </div>
+          </div>
+        </div>
+
+        <div id="pref-modal" class="modal-window">
+          <div>
+            <a href="#" title="Close" class="modal-close"><i class="fas fa-x"></i></a>
+            <div class="inner">
+              PUT USER PREFERENCES HERE
+            </div>
+          </div>
+        </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
         <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
