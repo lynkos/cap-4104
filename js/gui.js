@@ -216,3 +216,21 @@ $("#priority").on('change', function() {
     $("#priority option[data-value='selected']").text(val);
     $("#priority").val(val);
 });
+
+// Save toggle button
+function isChecked(isOn) {
+    localStorage.setItem("hideMusic", JSON.stringify(isOn));
+    if (isOn === false) $("#player").show();
+    else $("#player").hide();
+}
+
+var checked = JSON.parse(localStorage.getItem("hideMusic"));
+    document.getElementById("hideMusic").checked = checked;
+
+$(document).ready(function(){
+    isChecked(checked)
+    $("#toggle-button .switch input").on("change", function(e) {
+    const isOn = e.currentTarget.checked;
+    isChecked(isOn);
+  });
+});
