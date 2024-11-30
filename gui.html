@@ -156,23 +156,57 @@
         <div id="login-modal" class="modal-window">
           <div>
             <a href="#" title="Close" class="modal-close"><i class="fas fa-x"></i></a>
-            <div class="inner">
-              <center><h1>Login</h1></center><br>
-              <form action="">
-                <div class="group">
-                  <span><i class="fas fa-user"></i></span>
-                  <input id="userName" type="text" placeholder="Username" class="input" required>
+            <div class="inner" style="width: 400px;">
+              
+              <div class="form-container">
+                <div class="slide-controls">
+                  <input type="radio" name="slide" id="login" checked>
+                  <input type="radio" name="slide" id="signup">
+                  <label for="login" class="slide login">Login</label>
+                  <label for="signup" class="slide signup">Register</label>
+                  <div class="slider-tab"></div>
                 </div>
-                
-                <div class="group">
-                  <span><i class="fas fa-unlock"></i></span>
-                  <input id="userPw" type="password" placeholder="Password" class="input" data-type="password" required>
+                <div class="form-inner">
+                  <form action="#" class="login">
+                    <div class="group">
+                      <span><i class="fas fa-user"></i></span>
+                      <input id="userName" type="text" placeholder="Username" class="input" required>
+                    </div>
+
+                    <div class="group">
+                      <span><i class="fas fa-unlock"></i></span>
+                      <input id="userPw" type="password" placeholder="Password" class="input" data-type="password" required>
+                    </div>    
+
+                    <div class="pass-link"><a href="#">Forgot password?</a></div>
+
+                    <div class="group submit-btn">
+                      <input type="submit" class="button" value="Submit" onclick="login()">
+                    </div>
+                  </form>
+
+                  <form action="#" class="signup">
+                    <div class="group">
+                      <span><i class="fas fa-envelope"></i></span>
+                      <input id="email" type="text" placeholder="Email" class="input" required>
+                    </div>
+
+                    <div class="group">
+                      <span><i class="fas fa-user"></i></span>
+                      <input id="user" type="text" placeholder="Username" class="input" required>
+                    </div>
+
+                    <div class="group">
+                      <span><i class="fas fa-unlock"></i></span>
+                      <input id="pw" type="password" placeholder="Password" class="input" data-type="password" required>
+                    </div>
+
+                    <div class="group submit-btn">
+                      <input type="submit" class="button" value="Submit" onclick="register()">
+                    </div>    
+                  </form>
                 </div>
-                                
-                <div class="group submit-btn">
-                  <input type="submit" class="button" value="Submit" onclick="login()">
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
