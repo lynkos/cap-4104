@@ -1,7 +1,6 @@
 @use "variables" as vars
 
 $border-radius: 1rem
-$padding: 10px
 
 input[data-type="password"]
     -webkit-text-security: circle
@@ -13,13 +12,13 @@ input[data-type="password"]
     //margin-bottom: 15px
     
     i
-        padding: $padding
+        padding: vars.$padding
         color: vars.$menubar
         background: rgb(216, 208, 219)
         
     input
         border: 0
-        padding: calc($padding / 2)
+        padding: vars.$half-padding
         background: rgb(216, 208, 219)
         width: 100%
         outline: none
@@ -30,7 +29,7 @@ input[data-type="password"]
     input
         background: vars.$menubar
         border-radius: $border-radius
-        padding: $padding
+        padding: vars.$padding
         color: white
         cursor: pointer
 
@@ -59,7 +58,7 @@ select
     align-items: center
     
 .container
-    padding: calc(2 * $padding)
+    padding: calc(2 * vars.$padding)
     position: relative
     z-index: 1
 
@@ -68,16 +67,16 @@ select
         padding: 0
     
     li
-        padding: $padding
+        padding: vars.$padding
         border-radius: $border-radius
         display: flex
         background: white
         align-items: center
         position: relative
-        margin-top: calc($padding / 2)
+        margin-top: vars.$half-padding
 
         &:first-child
-            margin-top: $padding
+            margin-top: vars.$padding
         
     li.completed .task-text
         text-decoration: line-through
@@ -87,16 +86,16 @@ select
     
 #new-task
     flex: 1
-    padding: $padding
+    padding: vars.$padding
     border-radius: 0 $border-radius $border-radius 0
     outline: none
     border: none
 
 #button-container
-    margin-top: $padding
+    margin-top: vars.$padding
 
     #dark-button, #light-button
-        padding: $padding
+        padding: vars.$padding
         border: none
         border-radius: calc($border-radius * 2)
         cursor: pointer
@@ -106,11 +105,11 @@ select
         color: white
 
     #light-button
-        background: rgb(250, 229, 253)
+        background: vars.$secondary
         color: vars.$menubar
 
 #add-task-button
-    padding: $padding
+    padding: vars.$padding
     background: vars.$menubar
     color: white
     border: none
@@ -155,12 +154,12 @@ button.edit
     display: flex
     
     #right-button
-        margin-right: calc($padding / 2)
-        padding: $padding
+        margin-right: vars.$half-padding
+        padding: vars.$padding
         border: none
         border-radius: calc($border-radius * 2)
         cursor: pointer
-        background: rgb(250, 229, 253)
+        background: vars.$secondary
         color: vars.$menubar
 
 // MODAL
@@ -180,7 +179,7 @@ button.edit
 
     .inner
         background: white
-        padding: $padding
+        padding: vars.$padding
 
         h1
             text-align: center
@@ -197,21 +196,21 @@ button.edit
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-        padding: calc($padding * 2)
-        background: rgb(250, 229, 253)
+        padding: calc(vars.$padding * 2)
+        background: vars.$secondary
                 
     div:not(:last-of-type)
         margin-bottom: 15px
 
 .modal-close
     position: absolute
-    right: calc($padding / 2)
+    right: vars.$half-padding
     text-align: center
-    top: calc($padding / 2)
+    top: vars.$half-padding
     text-decoration: none
 
 #toggle-button
-    padding: $padding
+    padding: vars.$padding
     display: flex
     align-items: center
     font-size: 1rem
@@ -224,7 +223,7 @@ button.edit
 .switch
     position: relative
     display: inline-block
-    margin-left: $padding
+    margin-left: vars.$padding
     width: 60px
     height: 34px
     
