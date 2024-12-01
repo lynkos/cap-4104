@@ -225,11 +225,11 @@ function isChecked(isOn) {
 }
 
 var checked = JSON.parse(localStorage.getItem("hideMusic"));
-    document.getElementById("hideMusic").checked = checked;
+document.getElementById("hideMusic").checked = checked;
 
 $(document).ready(function(){
     isChecked(checked)
-    $("#toggle-button .switch input").on("change", function(e) {
+    $("#toggle-music-button .switch input").on("change", function(e) {
     const isOn = e.currentTarget.checked;
     isChecked(isOn);
   });
