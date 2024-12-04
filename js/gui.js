@@ -220,8 +220,9 @@ $("#priority").on('change', function() {
 // Save toggle button
 function isChecked(isOn) {
     localStorage.setItem("hideMusic", JSON.stringify(isOn));
-    if (isOn === false) $("#player").show();
-    else $("#player").hide();
+    if (isOn === false) $("#player").css("visibility", "visible");
+    
+    else $("#player").css("visibility", "hidden");
 }
 
 var checked = JSON.parse(localStorage.getItem("hideMusic"));
