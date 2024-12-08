@@ -1,11 +1,19 @@
-@use "variables"
-@import "style.min.css"
-
-.container
-  width: 75%
-
-  img
-    width: 100%
+@use "variables" as vars
 
 hr
-  color: variables.$indigo
+  color: vars.$indigo
+
+.parent
+    display: grid
+    grid-auto-flow: dense
+    margin-top: 10px
+        
+    .container
+        grid-column: 1
+
+        img
+            width: 100%
+
+        h1
+            text-align: center
+            color: vars.$space-cadet

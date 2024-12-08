@@ -1,1 +1,1 @@
-@import"style.min.css";.container{width:75%}.container img{width:100%}hr{color:#403672}
+hr{color:#403672}.parent{display:grid;grid-auto-flow:dense;margin-top:10px}.parent .container{grid-column:1}.parent .container img{width:100%}.parent .container h1{text-align:center;color:#161f4f}
