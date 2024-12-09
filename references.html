@@ -20,10 +20,18 @@
         <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="assets/favicon/site.webmanifest" />
         <link rel="preload" as="image" href="assets/logo.png" />
+        <link rel="preload" as="script" href="js/stars.js" />
+        <link rel="preload" as="script" href="https://unpkg.com/starback@2.1.1/dist/starback.global.js" />
         <link rel="preload" as="stylesheet" href="styles/css/style.min.css" />
         <link rel="stylesheet" href="styles/css/style.min.css" />
+
+        <style type="text/css">
+          p { text-indent: 1em; }
+          a, a:visited { color: #6F418D; }
+        </style>
     </head>
     <body>
+      <canvas id="canvas"></canvas>
         <div class="logo"><a href="/zenkitty" alt="Home"><img src="assets/logo.png" alt="Project Logo"></a></div>
         <nav class="menubar">
           <menu class="menu">
@@ -54,6 +62,14 @@
             <li><a href="/zenkitty/prototype.html" alt="Prototype">Prototype</a></li>
             <li><a href="/zenkitty/references.html" alt="References">References</a></li>
           </menu>
-        </nav>    
+        </nav>
+        <div class="container">
+          <center><h1>References</h1></center><br>
+          <p>Gachie, W., & Wesley Govender, D. (2017). The evaluation of human computer interface design of learning management systems: problems and perspectives. <em>Problems and Perspectives in Management, 15</em>(3), 394–410. <a target="_blank" href="https://doi.org/10.21511/ppm.15(3-2).2017.08" alt="Research paper DOI">https://doi.org/10.21511/ppm.15(3-2).2017.08</a></p>
+          <br>
+          <p>Majid, R. A., Noor, N. L. M., Adnan, W. A. W., & Mansor, S. (2009). A survey on HCI considerations in the software development life cycle. <em>Proceedings of the 2nd International Conference on Interaction Sciences Information Technology, Culture and Human - ICIS ’09</em>, 21–24. <a target="_blank" href="https://doi.org/10.1145/1655925.1655929">https://doi.org/10.1145/1655925.1655929</a></p>
+        </div>
+      <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+      <script src="js/stars.js"></script>
     </body>
 </html>
